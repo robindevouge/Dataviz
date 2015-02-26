@@ -16,7 +16,7 @@ html {
  * Remove default margin.
  */
 
-body {
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -89,6 +89,10 @@ ul {
   margin: 0; padding: 0;
 }
 
+li {
+  margin: 0; padding: 0;
+}
+
 ol {
   margin: 0;
   padding: 0;
@@ -149,9 +153,13 @@ dfn {
  * contexts in Firefox 4+, Safari, and Chrome.
  */
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 /**

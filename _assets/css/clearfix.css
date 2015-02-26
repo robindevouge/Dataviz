@@ -1,4 +1,4 @@
-.cf {
+.cf , .clearfix {
 	content: "";
     visibility: hidden;
     font-size: 0;
