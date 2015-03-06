@@ -101,13 +101,13 @@ p.intro{
 }
 
 .tug { 
-    -webkit-animation: ani-tug 4s ease-in 1 alternate;
-     -webkit-transform: translateY(-400px);
+    -webkit-animation: ani-tug 4s ease-in 1;
+    -webkit-transform: translateY(-400px);
 }
 
 .hug { 
-    -webkit-animation: ani-hug 4s ease-in 1 alternate;
-     -webkit-transform: translateY(0px);
+    -webkit-animation: ani-hug 4s ease-in 1;
+    -webkit-transform: translateY(0px);
 }
 
 @-webkit-keyframes ani-hug {
