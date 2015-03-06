@@ -1,137 +1,68 @@
-body {
+html, body {
     font-family: "Oswald",sans-serif;
     font-style: normal;
+	width: 100%; height: 100%;
 }
 
-div.wrapper{
-	 margin: 0 auto;
+/* structure */
+
+header {
+	position: fixed;
+	display: block;
+	width: 100%; height: 100%;
+	margin: 0; padding: 0;
+	background: #444444;
+	z-index: -100;
+}
+
+.mainNav {
+	width: 100%;
+	background: steelblue;
+	position: relative; top: calc(100% - 40px);
+}
+
+	ul {
+			width: 100%; height: 40px;
+		}
+
+			li {
+				display: block; float: left;
+				width: 18%; height: 100%;
+			}
+
+			li:last-child {
+				width: 28%;
+			}
+
+				li > a {
+					display: block;
+					width: 100%;
+					text-align: center;
+					margin: auto;
+				}
+
+.wrapper{
+	 margin: 0;
 	 display: block;
 	 white-space: nowrap;
 	 text-align: center;
-	 padding-bottom: 20px;
 	 min-height: 100%;
-	 width: auto;
+	 width: 100%;
 	 max-width: none;
+	 background: gray;
+	 position: relative; top: calc(100% - 40px);
 }
 
-h1 {
-    font-weight: 700;
-    font-size: 5.063;
-    letter-spacing: 1px;
-    text-rendering: optimizeLegibility;
-    text-shadow: 1px 1px 1px rgba(255,255,255, 0.7);
-}
+	main {
+		width: 100%; height: 1500px;
+		margin: 0; padding: 0;
+		background: #f2f2f2;
+	}
 
-h2 {
-    font-weight: 400;
-    font-size: 3.375em;
-}
+	footer {
+		width: 100%; height: 100px;
+		margin: 0; padding: 0;
+		background: red;
+	}
 
-h3 {
-    font-weight: 400;
-    font-size: 2.25em;
-}
-
-h4 {
-    font-weight: 400;
-    font-size: 1.5em;
-}
-
-p {
-    font-weight: 300;
-    font-size: 1em;
-    line-height: 26px;
-	margin-bottom: 35px;
-}
-
-p.intro{
-	margin-bottom: 35px;
-	font-size: 21px;
-	line-height: 28px;
-    color: #fffffe;
-    width: 600px;
-    margin: auto;
-    text-align: center;
-    position: relative;
-    top: 400px;
-}
-
-.Intro {
-    width: 100%;
-    height: 730px;
-    background-color: #333333;
-}
-
-.Title {
-    font-family: "Oswald",sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 5.063em;
-    color: #fffffe;
-    margin: 0 auto;
-    text-align: center;
-    vertical-align: middle;
-    top: 250px;
-    position: relative;
-}
-
-.tug, .hug, .war, fly {
-  display: inline-block;
-  transition: all 3s ease-in;
-}
-
-.war {
-    position: absolute;
-    left: 249px;
-}
-
-.tug {
-    position: absolute;
-    left: 340px;
-}
-
-.hug {
-    position: absolute;
-    left: 367px;
-}
-
-.fly {
-    position: absolute;
-    left: 623px;
-}
-
-.tug { 
-    -webkit-animation: ani-tug 4s ease-in 1 alternate;
-     -webkit-transform: translateY(-400px);
-}
-
-.hug { 
-    -webkit-animation: ani-hug 4s ease-in 1 alternate;
-     -webkit-transform: translateY(0px);
-}
-
-@-webkit-keyframes ani-hug {
-  0%{
-      opacity: 0;
-      transform: translateY(30px);
-  }
-  50%{
-      opacity: 0;
-      transform: translateY(30px);
-  }
-  100%{
-      opacity: 1;
-      transform: translateY(0px);
-  }
-}
-
-@-webkit-keyframes ani-tug {
-  0%{ 
-      opacity: 1; 
-      transform: translateY(0px);
-  }
-  100%{ 
-      opacity: 0;
-      transform: translateY(-60px); 
-  }
-}
+	
