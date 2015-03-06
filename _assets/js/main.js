@@ -1,21 +1,31 @@
 $(document).ready(function(){
 	
-	
+	// Sticky header
 	
 	$(window).scroll(function() {
 		
-		var navPos = $(".mainNav").offset().top,
-			pagePos = $(window).scrollTop();
-		console.log("scroll");
+		var scrollTop     = $(window).scrollTop(),
+    		elementOffset = $('.wrapper').offset().top,
+    		distance      = (elementOffset - scrollTop);
+		
+		console.log(distance);
+		
+		/*var navPos = $(".mainNav").offset().top,
+			//pagePos = $(window).scrollTop(),
+			pageHeight = $(window).height();
+		console.log(navPos);
+		console.log(pageHeight);*/
 
-		if (pagePos >= navPos) {
+		if (distance <= 50) {
 		   $(".mainNav").addClass("onTop");
-			console.log("add");
-		} else if (pagePos < navPos) {
+		   $(".kedis").removeClass("hidden");
+		} else if (distance > 50){
 			$(".mainNav").removeClass("onTop");
-			console.log("rmv");
+			$(".kedis").addClass("hidden");
 		}
 	});
+	
+	// Click to scrolls
 	
 	$(function() {
 	  $('a[href*=#]:not([href=#])').click(function() {
