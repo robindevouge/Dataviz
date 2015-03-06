@@ -53,6 +53,7 @@ p.intro{
     margin: auto;
     text-align: center;
     position: relative;
+    top: 400px;
 }
 
 .Intro {
@@ -100,12 +101,12 @@ p.intro{
 }
 
 .tug { 
-    -webkit-animation: ani-tug 6s ease-in infinite alternate;
+    -webkit-animation: ani-tug 4s ease-in 1 alternate;
      -webkit-transform: translateY(-400px);
 }
 
 .hug { 
-    -webkit-animation: ani-hug 6s ease-in infinite alternate;
+    -webkit-animation: ani-hug 4s ease-in 1 alternate;
      -webkit-transform: translateY(0px);
 }
 
