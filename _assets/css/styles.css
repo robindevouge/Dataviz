@@ -50,7 +50,9 @@ header {
 	display: block;
 	width: 100%; height: 100%;
 	margin: 0; padding: 0;
-	background: #444444; background-image: url(http://lorempixel.com/g/1144/800/nightlife);
+	background: #444444;
+	background-image: url(../img/fondtitre-compressor.png);
+	background-size: 100%;
 	z-index: -100;
 }
 
@@ -222,7 +224,7 @@ header {
     color: #fffffe;
     margin: 0 auto;
     text-align: center;
-    position: relative; top: 250px; left: 50%;
+    position: relative; top: 40%; left: 50%;
 	transform: translateX(-50%);
 }
 
