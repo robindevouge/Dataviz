@@ -7,14 +7,6 @@ $(document).ready(function(){
 		var scrollTop     = $(window).scrollTop(),
     		elementOffset = $('.wrapper').offset().top,
     		distance      = (elementOffset - scrollTop);
-		
-		console.log(distance);
-		
-		/*var navPos = $(".mainNav").offset().top,
-			//pagePos = $(window).scrollTop(),
-			pageHeight = $(window).height();
-		console.log(navPos);
-		console.log(pageHeight);*/
 
 		if (distance <= 50) {
 		   $(".mainNav").addClass("onTop");
