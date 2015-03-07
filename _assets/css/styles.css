@@ -6,9 +6,34 @@ html, body {
 
 /* styles */
 
+h1 {
+    font-weight: 700;
+    font-size: 5.063;
+    letter-spacing: 1px;
+    text-rendering: optimizeLegibility;
+    text-shadow: 1px 1px 1px rgba(255,255,255, 0.7);
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 3.375em;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 2.25em;
+}
+
 h4 {
     font-weight: 300;
     font-size: 1.3em;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 26px;
+	margin-bottom: 35px;
 }
 
 	.mainNav__text {
@@ -186,3 +211,190 @@ header {
 			.pplbbl__link:hover {
 				opacity: 1;
 			}
+
+/* TITLE */
+
+.title {
+    font-family: "Oswald",sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.063em;
+    color: #fffffe;
+    margin: 0 auto;
+    text-align: center;
+    position: relative; top: 250px; left: 50%;
+	transform: translateX(-50%);
+}
+
+.title__word {
+  
+}
+
+.wordWrapper {
+	display: inline-block;
+	position: relative;
+	width: 300px; height: 100px;
+	color: red;
+}
+
+.title__word--la {
+}
+
+.title__word--reussite, .title__word--guerre {
+    position: absolute; left: 50%;
+	transform: translateX(-50%);
+	margin-top: 3px;
+	
+}
+
+.title__word--reussite {
+	-webkit-animation: anim-reussite 5s infinite;
+	-moz-animation: anim-reussite 5s infinite;
+}
+
+.title__word--guerre {
+	-webkit-animation: anim-guerre 5s infinite;
+	-moz-animation: anim-guerre 5s infinite;
+}
+
+/* KEYFRAMES WEBKIT */
+
+@-webkit-keyframes anim-guerre {
+  0%{
+      opacity: 0;
+	  transform: translate(-50%,-30px);
+  }
+  25%{
+      opacity: 1;
+  }
+  40%{
+      opacity: 1;
+      transform: translate(-50%,0px);
+  }
+  60%{
+      opacity: 1;
+      transform: translate(-50%,0px);
+  }
+  75%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+	  transform: translate(-50%,-30px);
+  }
+}
+
+@-webkit-keyframes anim-reussite {
+  0%{
+      opacity: 1;
+	  transform: translate(-50%,0px);
+  }
+  25%{
+      opacity: 0;
+  }
+  40%{
+      opacity: 0;
+      transform: translate(-50%,-30px);
+  }
+  60%{
+      opacity: 0;
+      transform: translate(-50%,-30px);
+  }
+  75%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+	  transform: translate(-50%,0px);
+  }
+}
+
+/* KEYFRAMES WEBKIT */
+
+@-moz-keyframes anim-guerre {
+  0%{
+      opacity: 0;
+	  transform: translate(-50%,-30px);
+  }
+  25%{
+      opacity: 1;
+  }
+  40%{
+      opacity: 1;
+      transform: translate(-50%,0px);
+  }
+  60%{
+      opacity: 1;
+      transform: translate(-50%,0px);
+  }
+  75%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+	  transform: translate(-50%,-30px);
+  }
+}
+
+@-moz-keyframes anim-reussite {
+  0%{
+      opacity: 1;
+	  transform: translate(-50%,0px);
+  }
+  25%{
+      opacity: 0;
+  }
+  40%{
+      opacity: 0;
+      transform: translate(-50%,-30px);
+  }
+  60%{
+      opacity: 0;
+      transform: translate(-50%,-30px);
+  }
+  75%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+	  transform: translate(-50%,0px);
+  }
+}
+
+/*.title__word--reussite { 
+    -webkit-animation: ani-reussite 4s ease-in 1;
+    -webkit-transform: translateY(0);
+}
+
+.title__word--guerre { 
+    -webkit-animation: ani-guerre 4s ease-in 1;
+    -webkit-transform: translateY(0px);
+}*/
+
+/*
+@-webkit-keyframes ani-guerre {
+  0%{
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  50%{
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100%{
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes ani-reussite {
+  0%{ 
+      opacity: 1; 
+      transform: translateY(0px);
+  }
+  100%{ 
+      opacity: 0;
+      transform: translateY(-60px); 
+  }
+}
+*/
