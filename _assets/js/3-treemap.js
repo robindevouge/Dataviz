@@ -1,0 +1,175 @@
+$(document).ready(function(){
+	
+	
+	
+	var canvas_width = ($(window).width()/5)*2;
+	var canvas_height = canvas_width;
+	
+	var possibleColors={
+	  "JV":["#CAD383", "#DEE2B1", "#ECEFD6"],
+	  "3D":["#FBCF78", "#FEDEA8", "#FEEDD1"],
+	  "PP":["#93CEBE", "#BEE0D6", "#DCEEE8"],
+	  "DWM":["#EF7D88", "#F5AEB0", "#FBE2E0"],
+	  "ANIM":["#6086C1", "#99ABD6", "#C7D0E8"],
+	  "TOUS":["#6E6E6E", "#909090", "#A7A7A7"]
+	};
+
+	var currentSection;
+	function myColor (jsonItem){
+	 console.log(jsonItem["name"]); 
+	 if (jsonItem.section){
+	  currentSection=jsonItem.section;
+	  return "black";
+	}
+	   value=jsonItem["value"];
+		if (value >150)
+		 return possibleColors[currentSection][0];
+		else if (value>3)
+		  return possibleColors[currentSection][1];
+		else
+		  return possibleColors[currentSection][2];
+	}
+
+	/*
+	d3.json("flare.json", function(error, root) {
+	  var node = div.datum(root).selectAll(".node")
+		  .data(treemap.nodes)
+		.enter().append("div")
+		  .attr("class", "node")
+		  .call(position)
+		  .style("background", function(d) { return d.children ? color(d.name) : null; })
+		  .text(function(d) { return d.children ? null : d.name; });
+
+	  d3.selectAll("input").on("change", function change() {
+		var value = this.value === "count"
+			? function() { return 1; }
+			: function(d) { return d.size; };
+
+		node
+			.data(treemap.value(value).nodes)
+		  .transition()
+			.duration(1500)
+			.call(position);
+	  });
+	});
+	*/
+
+	 /* var colorSection;
+			  if (buildChart == 1)
+				buildChart= colorA;
+			  if (buildChart == 1)
+				buildChart= color;
+
+		colorA = ...
+		colorB = ...
+
+	*/
+
+	  $("#left select").on("change", function(){
+		var value =  $(this).val();
+		$("#left svg").remove()
+		buildChart(value, "#left");
+	  })
+
+	  $("#right select").on("change", function(){
+		var value =  $(this).val();
+		$("#right svg").remove()
+		buildChart(value, "#right");
+	  })
+
+	  buildChart(0, "#left");
+	  buildChart(1, "#right");
+
+
+	function buildChart(treemapSection, position){
+
+	  var canvas = d3.select(position).append("svg")
+		  .attr("width", canvas_width)
+		  .attr("height", canvas_height)
+
+	  d3.json("./_assets/data/treemap_pays.json", function (data){
+
+		console.log(data)
+
+
+		data = data[treemapSection]
+
+		var treemap = d3.layout.treemap()
+		  .size([canvas_width, canvas_height])
+		  .nodes(data)
+
+		var cells = canvas.selectAll(".cell")
+		  .data(treemap)
+		  .enter()
+		  .append("g")
+		  .attr("class", "cell")
+
+		  cells.append("rect")
+			.attr("x", function (d) {return d.x; })
+			.attr("y", function (d) {return d.y; })
+			.attr("width", function (d) {return d.dx; })
+			.attr("height", function (d) {return d.dy; })
+			.attr("fill", function (d) { return myColor(d); }) ////color(d.parent.name);
+
+			.attr("stroke", "#fff")
+			.on("mouseover", function(){  
+
+			  var maybeS;
+			  if (this["__data__"]["value"]>1)
+				maybeS="s";
+			  else
+				maybeS="";
+
+			  var myToolTipDiv = tooltip[0][0];
+
+			  myToolTipDiv.style.color = 'white';
+			  myToolTipDiv.style.backgroundColor = 'rgb(51,51,51)';
+			  myToolTipDiv.style.padding = "20px 20px 20px 20px";
+			  myToolTipDiv.style.borderRadius = "10px";
+			  myToolTipDiv.innerHTML = this["__data__"]["name"] +"<br>"+ this["__data__"]["value"] + " personne" + maybeS;
+
+
+			  return tooltip.style("visibility", "visible");
+			})
+			.on("mousemove", function(){return tooltip.style("top",
+			 (d3.event.pageY-10)+"px").style("left",(d3.event.pageX+10)+"px");})
+			.on("mouseout", function(){return tooltip.style("visibility", "hidden");});
+
+			 var tooltip = d3.select("body")
+			.append("div")
+			.style("position", "absolute")
+			.style("z-index", "10")
+			.style("visibility", "hidden")
+
+			/*
+			d3.selectAll("input").on("change", function change() {
+					var value = this.value === "0"
+					  ? function() { return 1; }
+					  : function(d) { return d.value; };
+
+				  node
+					.data(treemap.value(value).nodes)
+					.transition()
+					.duration(1500)
+					.call(position);
+
+
+			});*/
+			//Met les noms DANS les rectangles (au centre)
+		  /*
+		  cells.append("text")
+		  .attr("x", function (d) {return d.x +d.dx / 2 })
+		  .attr("y", function (d) {return d.y +d.dy / 2 })
+		  .attr("text-anchor", "middle")
+		  .text(function (d) { return d.name })
+		  */
+
+
+
+			//tooltip sur la pos de la souris
+
+			//.html(function(d){ console.log(this["__data__"]["name"]);  return "hello"} );
+			//return this["__data__"]["name"]}
+	  })
+	}
+});

@@ -70,17 +70,42 @@
 							<p>Visualisation des taux en pourcentage d’élèves ayant obtenu dans leur résultats de juin une satisfaction, distinction, grande distinction ou échec. Quel section à le plus haut taux de grande réussite ou échec.</p>
 						</div>
 					</div>
-					<div class="graphbox graphbox__3"></div>
+					<div class="graphbox graphbox__3">
+						<div class="container">
+						  <div id="left">
+							<select class="left_pute">
+							  <option type="radio" name="mode" value="0" selected> 3D</option>
+							  <option type="radio" name="mode" value="1"> JV</option>
+							  <option type="radio" name="mode" value="2"> PP</option>
+							  <option type="radio" name="mode" value="3"> DWM</option>
+							  <option type="radio" name="mode" value="4"> ANIM</option>
+							  <option type="radio" name="mode" value="5"> ALL</option>
+							</select>
+						  </div>
+
+						  <div id="right">
+							<select class="right_pute">
+							  <option type="radio" name="mode" value="0"> 3D</option>
+							  <option type="radio" name="mode" value="1" selected> JV</option>
+							  <option type="radio" name="mode" value="2"> PP</option>
+							  <option type="radio" name="mode" value="3"> DWM</option>
+							  <option type="radio" name="mode" value="4"> ANIM</option>
+							  <option type="radio" name="mode" value="5"> ALL</option>
+							</select>
+						  </div>
+						</div>
+						<div class="cf"></div>
+					</div>
 				</section>
 				
 				<section class="graphs graphs__4" id="graphs__4">
-					<div class="graphbox graphbox__4"></div>
 					<div class="graphtext graphtext__4">
 						<div class="textbox textbox__4">
 							<h3 class="graphtitle graphtitle__4">Ta mère en slip !</h3>
 							<p>Représentation du nombre total d’inscription dans chaque groupe de travail, quel à été la section la plus populaire depuis ces 5 dernières années.</p>
 						</div>
 					</div>
+					<div class="graphbox graphbox__4"></div>
 				</section>
 			</main>
 
@@ -122,6 +147,7 @@
 		<script src="_assets/js/jquery.min.js"></script>
 		<script src="_assets/js/d3.min.js"></script>
 		<script src="_assets/js/main.js"></script>
+		<script src="_assets/js/3-treemap.js"></script>
 	</body>
 
 </html>
