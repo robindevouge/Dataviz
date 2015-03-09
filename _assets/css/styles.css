@@ -22,6 +22,7 @@ h2 {
 h3 {
     font-weight: 400;
     font-size: 2.25em;
+	color: #fff;
 }
 
 h4 {
@@ -41,7 +42,7 @@ p {
 		text-align: center;
 	}
 
-		.mainNav__text--title {font-size: 1em; font-weight: 300; padding-top: 13px;}
+		.mainNav__text--title {	font-weight: 300; padding-top: 9px;}
 
 /* structure */
 
@@ -92,6 +93,10 @@ header {
 					color: #fffffe;
 				}
 
+				.mainNav__link--title {
+					background: #333;
+				}
+
 				.mainNav__link:hover {background: #fffffe; color: #6D6D6D !important;}
 
 .wrapper{
@@ -117,9 +122,8 @@ header {
 		}
 
 			.graphbox{
-				width: 50%; height: 100%;
+				width: 70%; height: 100%;
 				float: left;
-				background: #000;
 			}
 
 				.graphbox__3 {
@@ -131,40 +135,41 @@ header {
 			
 			.graphtext {
 				position: relative;
-				width: 50%; height: 100%;
+				width: 30%; height: 100%;
 				float: left;
-				background: #fff;
 			}
-
+	
 				.graphtext__3 {
 					width: 100%; height: auto;
 					float: none;
-					background: steelblue;
 				}
 
 				.graphtitle {
-					display: block;
 					padding: 10px 20px;
-					position: absolute; top: 130px; left: 120px;
-					background: red;
+					position: absolute; top: -25px; left: -25px;
+					background: #af1917;
 					text-align: center;
 				}
 
 					.graphtitle__3 {
-						padding: 0;
+						display: inline-block;
+						margin: 0 auto;
 						position: static;
 					}
 
 				.textbox {
+					position: relative;
 					width: 50%;
-					padding: 50px;
-					margin: 150px auto;
-					background: lightgray;					
+					padding: 75px 50px 35px 50px;
+					margin: 120px auto;
+					
+					background: #6e6e6e;
+					color: #fff;
 				}
 
 					.textbox__3 {
-						padding: 0; margin: 20px auto 0 auto;
-						width: 
+						padding: 50px; margin: 20px auto 0 auto;
+						width: 40%;
 					}
 
 	footer {
@@ -226,8 +231,4 @@ header {
     text-align: center;
     position: relative; top: 40%; left: 50%; 
 	transform: translateX(-50%);
-}
-
-.title__word--guerre {
-	color: red;
 }
