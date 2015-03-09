@@ -28,6 +28,7 @@ h3 {
 h4 {
     font-weight: 300;
     font-size: 1.3em;
+	color: #fff;
 }
 
 p {
@@ -43,6 +44,20 @@ p {
 	}
 
 		.mainNav__text--title {	font-weight: 300; padding-top: 9px;}
+
+/* TITLE */
+
+.title {
+    font-family: "Oswald",sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.063em;
+    color: #fffffe;
+    margin: 0 auto;
+    text-align: center;
+    position: relative; top: 40%; left: 50%; 
+	transform: translateX(-50%);
+}
 
 /* structure */
 
@@ -175,7 +190,7 @@ header {
 	footer {
 		width: 100%;
 		margin: 0; padding: 0;
-		background: #af1917;
+		background: #6d6d6d;
 	}
 
 		.label {
@@ -219,16 +234,18 @@ header {
 				opacity: 1;
 			}
 
-/* TITLE */
+		.footer__link {
+			color: #af1917;
+			border-bottom: 1px solid rgba(0,0,0,0)
+		}
+		.footer__link:hover {border-bottom: 1px dashed #af1917;}
 
-.title {
-    font-family: "Oswald",sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 5.063em;
-    color: #fffffe;
-    margin: 0 auto;
-    text-align: center;
-    position: relative; top: 40%; left: 50%; 
-	transform: translateX(-50%);
-}
+			.footer__link--sources {
+				display: table;
+				margin: 5px auto;
+				text-align: center;
+				
+			}
+
+		.dwm {height: 1em;}
+
