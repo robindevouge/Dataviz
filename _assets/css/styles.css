@@ -28,7 +28,6 @@ h3 {
 h4 {
     font-weight: 300;
     font-size: 1.3em;
-	color: #fff;
 }
 
 p {
@@ -135,6 +134,8 @@ header {
 			width: 100%;
 			height: 500px;
 		}
+.graphs__1 {height: 800px;}
+.graphs__3 {height: auto;}
 
 			.graphbox{
 				width: 70%; height: 100%;
@@ -159,7 +160,7 @@ header {
 
 				.graphtitle {
 					padding: 10px 20px;
-					position: absolute; top: -25px; left: -25px;
+					position: absolute; top: -30px; left: -22px;
 					background: #af1917;
 					text-align: center;
 				}
@@ -173,14 +174,14 @@ header {
 					position: relative;
 					width: 50%;
 					padding: 75px 50px 35px 50px;
-					margin: 120px auto;
+					margin: 80px auto;
 					
-					background: #6e6e6e;
+					border: 2px solid #fff;
 					color: #fff;
 				}
 
 					.textbox__3 {
-						position: absolute; right: 20%;
+						position: absolute; right: 10%;
 						margin: 50px 0;
 						width: 30%;
 					}
@@ -188,12 +189,13 @@ header {
 	footer {
 		width: 100%;
 		margin: 0; padding: 0;
-		background: #6d6d6d;
+		background: #fff;
 	}
 
 		.label {
 			margin: 0 auto; padding-top: 25px;
 			text-align: center;
+			color: #333333;
 		}
 			.label:last-child {padding-bottom: 25px;}
 
@@ -233,23 +235,36 @@ header {
 			}
 
 		.footer__link {
-			color: #af1917;
-			border-bottom: 1px solid rgba(0,0,0,0)
+			color: #333;
+			border-bottom: 1px dashed #af1917;
 		}
-		.footer__link:hover {border-bottom: 1px dashed #af1917;}
+		.footer__link:hover {border-bottom: 1px solid #af1917;}
 
 			.footer__link--sources {
-				display: table;
-				margin: 5px auto;
-				text-align: center;
-				
+				display: inline-block;
+				margin: 25px 20px;
+				font-weight: 300;
 			}
 
-		.dwm {height: 1em;}
+		.dwm {height: .9em;}
+	
+		.sources {display: table; margin: 0 auto;}
 
 
 
 
+
+/* CIRCLE */
+
+.arc {
+
+	font-size: 9px;
+	text-transform: uppercase;
+}
+
+.caca {
+	pointer-events:none;
+}
 
 /* TREEMAP */
 
@@ -279,6 +294,5 @@ header {
 
 .container{
   width: 100%;
-  height:;
-  margin: 0px auto;
+  margin: 0 auto;
 }

@@ -1,0 +1,17 @@
+body {
+
+	background: #30302b;
+	font-family: 'Oswald', sans-serif;
+}
+
+
+.arc {
+
+	font-size: 9px;
+	text-transform: uppercase;
+}
+
+.caca {
+
+	pointer-events:none;
+}

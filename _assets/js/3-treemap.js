@@ -16,7 +16,6 @@ $(document).ready(function(){
 
 	var currentSection;
 	function myColor (jsonItem){
-	 console.log(jsonItem["name"]); 
 	 if (jsonItem.section){
 	  currentSection=jsonItem.section;
 	  return "black";
@@ -29,41 +28,6 @@ $(document).ready(function(){
 		else
 		  return possibleColors[currentSection][2];
 	}
-
-	/*
-	d3.json("flare.json", function(error, root) {
-	  var node = div.datum(root).selectAll(".node")
-		  .data(treemap.nodes)
-		.enter().append("div")
-		  .attr("class", "node")
-		  .call(position)
-		  .style("background", function(d) { return d.children ? color(d.name) : null; })
-		  .text(function(d) { return d.children ? null : d.name; });
-
-	  d3.selectAll("input").on("change", function change() {
-		var value = this.value === "count"
-			? function() { return 1; }
-			: function(d) { return d.size; };
-
-		node
-			.data(treemap.value(value).nodes)
-		  .transition()
-			.duration(1500)
-			.call(position);
-	  });
-	});
-	*/
-
-	 /* var colorSection;
-			  if (buildChart == 1)
-				buildChart= colorA;
-			  if (buildChart == 1)
-				buildChart= color;
-
-		colorA = ...
-		colorB = ...
-
-	*/
 
 	  $("#left select").on("change", function(){
 		var value =  $(this).val();
@@ -88,9 +52,6 @@ $(document).ready(function(){
 		  .attr("height", canvas_height)
 
 	  d3.json("./_assets/data/treemap_pays.json", function (data){
-
-		console.log(data)
-
 
 		data = data[treemapSection]
 
@@ -141,35 +102,6 @@ $(document).ready(function(){
 			.style("z-index", "10")
 			.style("visibility", "hidden")
 
-			/*
-			d3.selectAll("input").on("change", function change() {
-					var value = this.value === "0"
-					  ? function() { return 1; }
-					  : function(d) { return d.value; };
-
-				  node
-					.data(treemap.value(value).nodes)
-					.transition()
-					.duration(1500)
-					.call(position);
-
-
-			});*/
-			//Met les noms DANS les rectangles (au centre)
-		  /*
-		  cells.append("text")
-		  .attr("x", function (d) {return d.x +d.dx / 2 })
-		  .attr("y", function (d) {return d.y +d.dy / 2 })
-		  .attr("text-anchor", "middle")
-		  .text(function (d) { return d.name })
-		  */
-
-
-
-			//tooltip sur la pos de la souris
-
-			//.html(function(d){ console.log(this["__data__"]["name"]);  return "hello"} );
-			//return this["__data__"]["name"]}
 	  })
 	}
 });
