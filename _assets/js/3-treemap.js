@@ -3,7 +3,7 @@ $(document).ready(function(){
 	
 	
 	var canvas_width = ($(window).width()/5)*2;
-	var canvas_height = canvas_width;
+	var canvas_height = canvas_width/1.5;
 	
 	var possibleColors={
 	  "JV":["#CAD383", "#DEE2B1", "#ECEFD6"],
