@@ -22,7 +22,27 @@ $(document).ready(function(){
 
 						   .attr("r", function(d) { return d.value/10; })
 						   .attr("fill", function(d, i) { return color[i]; })
-						   .attr("cx", function(d) { return total +=  3*d.value/10; });
+						   .attr("cx", function(d) { if (d.name==="3D")
+
+								{return total +=  3*d.value/10; }
+
+								else if (d.name==="JV")
+
+								{return total +=  3*d.value/10; }
+
+									else if (d.name==="PP")
+
+								{return total +=  3*d.value/13; }
+
+								else if (d.name==="DWM")
+
+								{return total +=  3*d.value/11.5; }
+
+									else
+
+				       			{return total +=  3*d.value/10; }
+												   
+							});
 
 	total = 0;
 
@@ -38,23 +58,23 @@ $(document).ready(function(){
 
 							if (d.name==="3D") 
 
-								{return total +=(3*d.value/10) - (d.value/40);}
+			    				{return total +=(3*d.value/10) - (d.value/40);}
 
-							else if (d.name==="JV")
-
-								{return total +=(3*d.value/10) - (d.value/2000);}
-
-							else if (d.name==="PP")
+			    			else if (d.name==="JV")
 
 								{return total +=(3*d.value/10) - (d.value/2000);}
 
-							else if (d.name==="DWM")
+			    			else if (d.name==="PP")
 
-								{return total +=(3*d.value/10) - (d.value/80);}
+			    				{return total +=(3*d.value/13) - (d.value/2000);}
 
-							else 
+			    			else if (d.name==="DWM")
 
-								{return total +=(3*d.value/10) - (d.value/2000);}
+			    				{return total +=(3*d.value/11) - (d.value/50);}
+
+			    			else 
+
+			    				{return total +=(3*d.value/10) - (d.value/100);}
 
 
 						 })
