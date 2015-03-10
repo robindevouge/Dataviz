@@ -17,6 +17,7 @@ $(document).ready(function(){
 		.orient("bottom");
 
 	var yAxis = d3.svg.axis()
+		//.attr("class", "axis")
 		.scale(y)
 		.orient("left")
 		.tickFormat(d3.format(".2s"));
@@ -83,7 +84,6 @@ $(document).ready(function(){
 		  .call(xAxis);
 
 		svg.append("g")
-		  .attr("class", "y axis")
 		  .call(yAxis)
 		  .style("fill","white")
 		.append("text")
