@@ -3,7 +3,7 @@ $(document).ready(function(){
 	
 	
 	var canvas_width = ($(window).width()/5)*2;
-	var canvas_height = canvas_width/1.5;
+	var canvas_height = canvas_width/1.3;
 	
 	var possibleColors={
 	  "JV":["#CAD383", "#DEE2B1", "#ECEFD6"],
@@ -84,6 +84,7 @@ $(document).ready(function(){
 			  var myToolTipDiv = tooltip[0][0];
 
 			  myToolTipDiv.style.color = 'white';
+			  myToolTipDiv.style.border = '1px #fff solid';
 			  myToolTipDiv.style.backgroundColor = 'rgb(51,51,51)';
 			  myToolTipDiv.style.padding = "20px 20px 20px 20px";
 			  myToolTipDiv.style.borderRadius = "10px";
