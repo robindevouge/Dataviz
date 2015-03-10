@@ -52,7 +52,6 @@ $(document).ready(function(){
 	  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "State"; }));
 	  data.forEach(function(d) {
 		var yColumn = new Array();
-		console.log(d);
 		d.columnDetails = columnHeaders.map(function(name) {
 		  for (ic in innerColumns) {
 			if($.inArray(name, innerColumns[ic]) >= 0){

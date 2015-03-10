@@ -9,7 +9,7 @@ $(document).ready(function(){
 					.attr("width",width)
 					.attr("height",height)
 
-	//["annees", "13-14", "12-13", "11-12", "10-11", "09-10"],
+
 	var myJsonData = [
 	
 
@@ -84,16 +84,9 @@ $(document).ready(function(){
 
 	var outer = 160;
 
-	var groupeCircle = canvas.append("g").attr("class", "caca");
+	var groupeCircle = canvas.append("g").attr("class", "centre");
 
-	// var middleCircle = groupeCircle.append("circle").attr({
-	// 	"class": ".circle",
-	// 	"r": 130,
-	// 	"transform": "translate("+width / 2+","+height / 2+")",
-	// 	"fill": "blue"
-	// });
-
-	groupeCircle.append("image").attr({
+		groupeCircle.append("image").attr({
 		"xlink:href" : "./_assets/img/svg-interieur.svg",
 		"width": 260,
 		"height": 260,
@@ -101,11 +94,7 @@ $(document).ready(function(){
 
 
 	})
-							// 	.attr("class","rect")
-							   // .attr("r", 130 )
-							   // .attr("fill", "red");
-
-
+				
 	var arcs = group.selectAll(".arc")
 				.data(pie(myJsonData))
 				.enter()
@@ -461,16 +450,7 @@ $(document).ready(function(){
 		.attr("fill","#fff")
 		.attr("text-anchor", "middle")
 
-	/*
-	arcs.append("text")
-		.attr("transform", function(d) {return "translate("+arc5.centroid(d)+")";})//set the text in middle of the arc 
-		.text(function(d) {return d.data})//put the data
-		.attr("fill","#fff")*/
-
-
-
-
-
+	
 	var arc6 = d3.svg.arc()
 				.innerRadius(inner+180)
 				.outerRadius(outer+180)

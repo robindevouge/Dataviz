@@ -29,10 +29,10 @@
 
 				<li><a href="#top" class="mainNav__link mainNav__link--title"><h4 class="mainNav__text mainNav__text--title">La guerre des sections</h4></a></li>
 			
-				<li><a href="#graphs__1" class="mainNav__link"><h4 class=mainNav__text>Résultats</h4></a></li>                	
-				<li><a href="#graphs__2" class="mainNav__link"><h4 class=mainNav__text>Popularité</h4></a></li>                	
-				<li><a href="#graphs__3" class="mainNav__link"><h4 class=mainNav__text>Origine</h4></a></li>                	
-				<li><a href="#graphs__4" class="mainNav__link"><h4 class=mainNav__text>Mentions</h4></a></li>
+				<li><a href="#graphs__1" class="mainNav__link mainNav__link--1"><h4 class=mainNav__text>Résultats</h4></a></li>                	
+				<li><a href="#graphs__2" class="mainNav__link mainNav__link--2"><h4 class=mainNav__text>Popularité</h4></a></li>                	
+				<li><a href="#graphs__3" class="mainNav__link mainNav__link--3"><h4 class=mainNav__text>Origine</h4></a></li>                	
+				<li><a href="#graphs__4" class="mainNav__link mainNav__link--4"><h4 class=mainNav__text>Mentions</h4></a></li>
 
 				<li><a href="#" target="_blank" class="mainNav__link"><h4 class=mainNav__text>Case Study</h4></a></li>                	
 			</ul>
@@ -79,23 +79,23 @@
 						<div class="container">
 						  <div id="left">
 							<select class="left_pute">
-							  <option type="radio" name="mode" value="0" selected> 3D</option>
-							  <option type="radio" name="mode" value="1"> JV</option>
-							  <option type="radio" name="mode" value="2"> PP</option>
-							  <option type="radio" name="mode" value="3"> DWM</option>
-							  <option type="radio" name="mode" value="4"> ANIM</option>
-							  <option type="radio" name="mode" value="5"> ALL</option>
+							  <option value="0" selected> 3D</option>
+							  <option value="1"> JV</option>
+							  <option value="2"> PP</option>
+							  <option value="3"> DWM</option>
+							  <option value="4"> ANIM</option>
+							  <option value="5"> ALL</option>
 							</select>
 						  </div>
 
 						  <div id="right">
 							<select class="right_pute">
-							  <option type="radio" name="mode" value="0"> 3D</option>
-							  <option type="radio" name="mode" value="1" selected> JV</option>
-							  <option type="radio" name="mode" value="2"> PP</option>
-							  <option type="radio" name="mode" value="3"> DWM</option>
-							  <option type="radio" name="mode" value="4"> ANIM</option>
-							  <option type="radio" name="mode" value="5"> ALL</option>
+							  <option value="0"> 3D</option>
+							  <option value="1" selected> JV</option>
+							  <option value="2"> PP</option>
+							  <option value="3"> DWM</option>
+							  <option value="4"> ANIM</option>
+							  <option value="5"> ALL</option>
 							</select>
 						  </div>
 						</div>
@@ -115,9 +115,12 @@
 					</div>
 					<div class="cf"></div>
 				</section>
+				<a href="#footer" class="arrow">
+					<img src="_assets/img/arrow.svg" alt="arrow">
+				</a>
 			</main>
 
-			<footer>
+			<footer id="footer">
 				<div class="label label__pplbbl">
 					<h4>Réalisé par :</h4>
 				</div>
@@ -139,13 +142,15 @@
 						<a href="https://twitter.com/Thomas_Vallez" target="_blank" class="pplbbl__link">@Thomas_Vallez</a>
 					</div>
 				</div>
-				<div class="label"><h4>Pour le workshop <a href="https://dwm.re/dataviz/" target="_blank" class="footer__link footer__link--dataviz">Dataviz</a> @ <a href="https://dwm.re/" target="_blank" class="footer__link footer__link--dwm"><img src="_assets/img/dwm.svg" class="dwm"></a> avec l'aide de :</h4></div>
+				<div class="label"><h4>Pour le workshop <a href="https://dwm.re/dataviz/" target="_blank" class="footer__link footer__link--dataviz">Dataviz</a> @ <a href="https://dwm.re/" target="_blank" class="footer__link footer__link--dwm"><img src="_assets/img/dwm.svg" alt="dwm logo" class="dwm"></a> avec l'aide de :</h4></div>
 				<div class="sources">
+					<p class="footer__link--sources">Les profs !</p>
 					<a href="http://jquery.com/" target="_blank" class="footer__link footer__link--sources">jQuery</a>
 					<a href="http://d3js.org/" target="_blank" class="footer__link footer__link--sources">D3.js</a>
-					<a href="http://www.learningjquery.com/2007/10/improved-animated-scrolling-script-for-same-page-links" target="_blank" class="footer__link footer__link--sources">A smooth scrolling snippet</a>
-					<p class="footer__link--sources">Les profs !</p>
-					<!-- <a href="" target="_blank" class="footer__link footer__link--sources"></a> -->
+					<a href="http://www.learningjquery.com/2007/10/improved-animated-scrolling-script-for-same-page-links" target="_blank" class="footer__link footer__link--sources">Snippet de smooth scrolling</a>
+					<a href="http://www.youtube.com/playlist?list=PL6il2r9i3BqH9PmbOf5wA5E1wOG3FT22p" target="_blank" class="footer__link footer__link--sources">Tutos de d3Vienno</a>
+					<p class="footer__link--sources">Graphique "treemap" : <a href="http://bl.ocks.org/mbostock/4063582" target="_blank" class="footer__link footer__link--sources footer__link--sources--dual1">1</a> et <a href="http://bost.ocks.org/mike/treemap/" target="_blank" class="footer__link footer__link--sources footer__link--sources--dual2">2</a></p>
+					<p class="footer__link--sources">Barcharts empilées : <a href="http://bl.ocks.org/mbostock/4063582" target="_blank" class="footer__link footer__link--sources footer__link--sources--dual3">1</a> et <a href="http://bost.ocks.org/mike/treemap/" target="_blank" class="footer__link footer__link--sources footer__link--sources--dual4">2</a></p>
 				</div>
 			</footer>
 		</div>
