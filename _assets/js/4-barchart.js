@@ -73,7 +73,7 @@ $(document).ready(function(){
 	  x0.domain(data.map(function(d) { return d.State; }));
 	  x1.domain(d3.keys(innerColumns)).rangeRoundBands([0, x0.rangeBand()]);
 
-	  y.domain([0, d3.max(data, function(d) { 
+	  y.domain([-0.5, d3.max(data, function(d) { 
 		return d.total; 
 	  })]);
 
@@ -84,6 +84,7 @@ $(document).ready(function(){
 		  .call(xAxis);
 
 		svg.append("g")
+		  .style("width", "50px")
 		  .call(yAxis)
 		  .style("fill","white")
 		.append("text")

@@ -532,4 +532,8 @@ header {
 
 
 
-.axis {stroke-width: 1px}
+.domain {
+	stroke-width: 2px !important;
+	stroke: #fff;
+	fill: rgba(0,0,0,0);
+}
